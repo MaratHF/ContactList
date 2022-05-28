@@ -21,16 +21,7 @@ struct ContactDetailInfoView: View {
                     .padding()
                 Spacer()
             }
-            HStack {
-                Image(systemName: "phone")
-                    .foregroundColor(.blue)
-                Text(person.phoneNumber)
-            }
-            HStack {
-                Image(systemName: "tray")
-                    .foregroundColor(.blue)
-                Text(person.email)
-            }
+            NumbersOfContactView(contact: person)
         }
         .navigationTitle(person.fullName)
     }

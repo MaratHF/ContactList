@@ -17,16 +17,7 @@ struct ContactListWithDetailInfoView: View {
             List(selection: $singleSelection) {
                 ForEach(contactList) { contact in
                     Section(header: Text(contact.fullName)) {
-                        HStack {
-                            Image(systemName: "phone")
-                                .foregroundColor(.blue)
-                            Text(contact.phoneNumber)
-                        }
-                        HStack {
-                            Image(systemName: "tray")
-                                .foregroundColor(.blue)
-                            Text(contact.email)
-                        }
+                        NumbersOfContactView(contact: contact)
                     }
                 }
             }
